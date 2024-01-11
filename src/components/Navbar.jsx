@@ -45,19 +45,19 @@ const Navbar = () => {
       {/* Mobile Menu */}
       <ul className={!nav ? 'hidden' : 'absolute left-0 top-0 w-full h-screen bg-[#0a192f] flex flex-col items-center justify-center'}>
         <li className="py-4 text-4xl">
-          <Link to="home" smooth={true} duration={500} >Home</Link>
+          <Link onClick={handleClick} to="home" smooth={true} duration={500} >Home</Link>
         </li>
         <li className="py-4 text-4xl">
-          <Link to="about" smooth={true} duration={500} >About</Link>
+          <Link onClick={handleClick}  to="about" smooth={true} duration={500} >About</Link>
         </li>
         <li className="py-4 text-4xl">
-          <Link to="skills" smooth={true} duration={500} >Skills</Link>
+          <Link onClick={handleClick}  to="skills" smooth={true} duration={500} >Skills</Link>
         </li>
         <li className="py-4 text-4xl">
-          <Link to="work" smooth={true} duration={500} >Work</Link>
+          <Link onClick={handleClick}  to="work" smooth={true} duration={500} >Work</Link>
         </li>
         <li className="py-4 text-4xl">
-          <Link to="contact" smooth={true} duration={500} >Contact</Link>
+          <Link onClick={handleClick}  to="contact" smooth={true} duration={500} >Contact</Link>
         </li>
       </ul>
 
