@@ -8,8 +8,50 @@ import ReactLogo from '../../assets/icons8-react-native-48.png'
 import Symfony from '../../assets/icons8-symfony-144.png'
 import WordPress from '../../assets/wordpress.png'
 import Mysql from '../../assets/icons8-mysql-144.png'
+import { motion, useAnimation } from 'framer-motion';
+import { useEffect, useRef } from 'react';
+
+const data = [
+    { title: 'HTML', image: HTML },
+    { title: 'CSS', image: CSS },
+    { title: 'JS', image: JS },
+    { title: 'PHP', image: PHP },
+    { title: 'React', image: ReactLogo },
+    { title: 'Symfony', image: Symfony },
+    { title: 'WordPress', image: WordPress },
+    { title: 'Mysql', image: Mysql },
+];
+
+const variants = {
+    hidden: { opacity: 0, y: 80 },
+    visible: { opacity: 1, y: 0 },
+};
 
 const Skills = () => {
+
+    const controls = useAnimation();
+    const elementRefs = useRef([]);
+    
+    useEffect(() => {
+        const handleScroll = () => {
+            elementRefs.current.forEach((elementRef, index) => {
+                const elementTop = elementRef.offsetTop;
+                const scrollPosition = window.scrollY + window.innerHeight;
+
+                if (scrollPosition > elementTop) {
+                    controls.start('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [controls]);
+
+
   return (
     <div name='skills' className='w-full h-screen bg-[#0a192f] text-gray-300'>
         {/* container */}
@@ -20,38 +62,20 @@ const Skills = () => {
             </div>
 
             <div className='w-full grid grid-cols-2 sm:grid-cols-4 gap-4 text-center py-8'>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={HTML} alt="HTML Logo" />
-                    <p className='my-4'>HTML</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={CSS} alt="CSS Logo" />
-                    <p className='my-4'>CSS</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={JS} alt="Javascript Logo" />
-                    <p className='my-4'>JAVASCRIPT</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={PHP} alt="PHP Logo" />
-                    <p className='my-4'>PHP</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={ReactLogo} alt="REACT Logo" />
-                    <p className='my-4'>REACT</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Symfony} alt="Symfony Logo" />
-                    <p className='my-4'>SYMFONY</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={WordPress} alt="WordPress Logo" />
-                    <p className='my-4'>WORDPRESS</p>
-                </div>
-                <div className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'>
-                    <img className='w-20 mx-auto' src={Mysql} alt="Mysql Logo" />
-                    <p className='my-4'>MySQL</p>
-                </div>
+                {data.map((item, index) => (
+                    <motion.div
+                        key={index}
+                        ref={(ref) => (elementRefs.current[index] = ref)}
+                        className='shadow-md shadow-[#040c16] hover:scale-110 duration-500'
+                        initial='hidden'
+                        animate={controls}
+                        variants={variants}
+                        transition={{ delay: index * 0.75 }}
+                    >
+                        <img className='w-20 mx-auto' src={item.image} alt={`${item.title} Logo`} />
+                        <p className='my-4'>{item.title}</p>
+                    </motion.div>
+                ))}
             </div>
         </div>
     </div>

@@ -1,7 +1,7 @@
 //TODO : code 1
 
 import React, { useEffect, useState } from "react";
-import { Link as ScrollLink, Element } from "react-scroll";
+import { Element } from "react-scroll";
 import { motion } from "framer-motion";
 
 const About = () => {
