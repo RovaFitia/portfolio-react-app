@@ -70,7 +70,7 @@ const Skills = () => {
                         initial='hidden'
                         animate={controls}
                         variants={variants}
-                        transition={{ delay: index * 0.75 }}
+                        transition={{ delay: index * 0.5 }}
                     >
                         <img className='w-20 mx-auto' src={item.image} alt={`${item.title} Logo`} />
                         <p className='my-4'>{item.title}</p>
