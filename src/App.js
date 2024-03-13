@@ -6,15 +6,15 @@ import Skills from "./components/pages/Skills.jsx";
 import Work from "./components/pages/Work.jsx";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
-    </div>
+  	return (
+		<div>
+			<Navbar />
+			<Home />
+			<About />
+			<Skills />
+			<Work />
+			<Contact />
+		</div>
   );
 }
 

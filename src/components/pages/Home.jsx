@@ -1,6 +1,7 @@
 import React from 'react'
 import {HiArrowNarrowRight} from 'react-icons/hi'
 import {motion} from 'framer-motion'
+import { Link } from 'react-scroll';
 
 const Home = () => {
 
@@ -32,17 +33,20 @@ const Home = () => {
             ))}
             
             <div>
-                <motion.button
-                    initial={{ opacity: 0, x: -100 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 1.5, delay: elements.length * 1.45 }}
-                    className='text-white group border-2 py-3 px-6 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'
-                >
-                    View Work 
-                    <span className='group-hover:rotate-90 duration-300'>
-                    <HiArrowNarrowRight className="ml-3"/>
-                    </span>
-                </motion.button>
+                <Link to="about" smooth={true} duration={500} className='w-auto'>
+                    <motion.button
+                        initial={{ opacity: 0, x: -100 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 1.5, delay: elements.length * 1.45 }}
+                        className='text-white group border-2 py-3 px-6 my-2 flex items-center hover:bg-pink-600 hover:border-pink-600'
+                    >
+                        
+                            View Work 
+                            <span className='group-hover:rotate-90 duration-300'>
+                            <HiArrowNarrowRight className="ml-3"/>
+                            </span>
+                    </motion.button>
+                </Link>
             </div>
         </div>
 
