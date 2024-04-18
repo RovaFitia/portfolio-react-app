@@ -10,7 +10,7 @@ const AnekTelugu = Anek_Telugu({
 });
 
 export const metadata: Metadata = {
-  title: "Appolo . Software Engineer",
+  title: "Rova Fitia . Software Engineer",
   description: "Portfolio in react, tailwind, Next js and Typescript",
 };
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="h-full">
-      <body className={cn(GeistSans.variable, AnekTelugu, "font-sans h-full bg-background text-forground")}>{children}</body>
+      <body className={cn(GeistSans.variable, AnekTelugu.variable, "font-sans h-full bg-background text-forground")}>{children}</body>
     </html>
   );
 }
