@@ -1,13 +1,13 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react'
-import HTML from '../../assets/html-5.png'
-import CSS from '../../assets/css-3.png'
-import JS from '../../assets/js.png'
-import PHP from '../../assets/php.png'
-import ReactLogo from '../../assets/icons8-react-native-48.png'
-import Symfony from '../../assets/icons8-symfony-144.png'
-import WordPress from '../../assets/wordpress.png'
-import Mysql from '../../assets/icons8-mysql-144.png'
+import HTML from '../../assets/skills/html-5.png'
+import CSS from '../../assets/skills/css-3.png'
+import JS from '../../assets/skills/js.png'
+import PHP from '../../assets/skills/php.png'
+import ReactLogo from '../../assets/skills/icons8-react-native-48.png'
+import Symfony from '../../assets/skills/icons8-symfony-144.png'
+import WordPress from '../../assets/skills/wordpress.png'
+import Mysql from '../../assets/skills/icons8-mysql-144.png'
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 

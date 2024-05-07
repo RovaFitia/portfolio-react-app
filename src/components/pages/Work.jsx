@@ -1,9 +1,11 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from "react" ;
-import Image1 from "../../assets/Igoblog.png" ;
-import Image2 from "../../assets/Nir-info.png" ;
-import Image3 from "../../assets/Leslandines.png" ;
-import Image4 from "../../assets/myexpat.png" ;
+import Image1 from "../../assets/work/Igoblog.png" ;
+import Image2 from "../../assets/work/Nir-info.png" ;
+import Image3 from "../../assets/work/Leslandines.png" ;
+import Image4 from "../../assets/work/myexpat.png" ;
+import Image5 from "../../assets/work/Investissement-locatif.png" ;
+import Image6 from "../../assets/work/nousgerons.png" ;
 import { motion, useAnimation } from 'framer-motion';
 import { useEffect, useRef } from 'react';
 
@@ -12,6 +14,8 @@ const datas = [
     {image: Image2, title: 'Blog de l\'entreprise IT Nir\'info', url: 'https://nir-info.mg'} ,
     {image: Image3, title: 'Blog du l\'entreprise Leslandines', url:'https://leslandines.com'} ,
     {image: Image4, title: 'Blog du l\'entreprise My expat', url:'https://myexpat.fr'} ,
+    {image: Image5, title: 'Dashboard du site Investissement locatif', url:'https://investissement-locatif.com/'} ,
+    {image: Image6, title: 'Mise à jour du site Nousgerons', url:'https://nousgerons.com/'} ,
 ] ;
 
 const variants = {
@@ -64,16 +68,16 @@ const Work = () => {
                     transition={{ delay: index * 0.5 }}
                 >
                 
-                    <div className='opacity-0 group-hover:opacity-100'>
-                        <span className='text-[18px] font-bold text-white tracking-wider text-center'>
+                    <div className='flex flex-col items-center justify-center gap-1 opacity-0 group-hover:opacity-100'>
+                        <span className='text-[18px] text-wrap block w-[200px] font-bold text-white tracking-wider text-center'>
                             {item.title}
                         </span>
-                        <div className='pt-8 text-center'>
+                        <div className='text-center'>
                             <a href={item.url} target="_bank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Demo</button>
+                                <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-700 font-bold text-sm'>Demo</button>
                             </a>
                             <a href="https://github.com/RovaFitia" target="_bank">
-                                <button className='text-center rounded-lg px-4 py-3 m-2 bg-white text-gray-700 font-bold text-lg'>Code</button>
+                                <button className='text-center rounded-lg px-3 py-3 m-2 bg-white text-gray-700 font-bold text-sm'>Code</button>
                             </a>
                         </div>
                     </div>
