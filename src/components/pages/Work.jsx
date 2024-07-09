@@ -12,10 +12,10 @@ import { useEffect, useRef } from 'react';
 const datas = [
     {image: Image1, title: 'Blog du site Igoblog', url: 'https://igoblog.fr'} ,
     {image: Image2, title: 'Blog de l\'entreprise IT Nir\'info', url: 'https://nir-info.mg'} ,
-    {image: Image3, title: 'Blog du l\'entreprise Leslandines', url:'https://leslandines.com'} ,
-    {image: Image4, title: 'Blog du l\'entreprise My expat', url:'https://myexpat.fr'} ,
-    {image: Image5, title: 'Dashboard du site Investissement locatif', url:'https://investissement-locatif.com/'} ,
-    {image: Image6, title: 'Mise à jour du site Nousgerons', url:'https://nousgerons.com/'} ,
+    {image: Image3, title: 'Blog de l\'entreprise Leslandines', url:'https://leslandines.com'} ,
+    {image: Image4, title: 'Blog de l\'entreprise My expat', url:'https://myexpat.fr'} ,
+    {image: Image5, title: 'Intégration du dashboard du site Investissement locatif', url:'https://investissement-locatif.com/'} ,
+    {image: Image6, title: 'Intégration du site Nousgerons', url:'https://nousgerons.com/'} ,
 ] ;
 
 const variants = {

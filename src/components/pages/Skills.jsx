@@ -50,6 +50,7 @@ const Skills = () => {
             window.removeEventListener('scroll', handleScroll);
         };
     }, [controls]);
+    
 
 
   return (
