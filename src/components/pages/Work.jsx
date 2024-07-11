@@ -23,7 +23,7 @@ const datas = [
   },
   {
     image: Image3,
-    title: "Blog de l'entreprise Leslandines",
+    title: "Blog of Leslandines company",
     url: "https://leslandines.com",
   },
   {
