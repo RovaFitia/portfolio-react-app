@@ -11,10 +11,14 @@ import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
 const datas = [
-  { image: Image1, title: "Blog du site Igoblog", url: "https://igoblog.fr" },
+  {
+    image: Image1,
+    title: "Blog of the Igoblog site",
+    url: "https://igoblog.fr",
+  },
   {
     image: Image2,
-    title: "Blog de l'entreprise IT Nir'info",
+    title: "IT company blog Nir'info",
     url: "https://nir-info.mg",
   },
   {
@@ -24,22 +28,22 @@ const datas = [
   },
   {
     image: Image4,
-    title: "Blog de l'entreprise My expat",
+    title: "Leslandines company blog",
     url: "https://myexpat.fr",
   },
   {
     image: Image5,
-    title: "Intégration du dashboard du site Investissement locatif",
+    title: "Integration of Investissement locatif site dashboard",
     url: "https://investissement-locatif.com/",
   },
   {
     image: Image6,
-    title: "Intégration du site Nousgerons",
+    title: "Integration of Nousgerons site ",
     url: "https://nousgerons.com/",
   },
   {
     image: Image7,
-    title: "Création du site Beetravel",
+    title: "Creation of the Beetravel website",
     url: "https://github.com/RovaFitia/beetravel",
   },
 ];
