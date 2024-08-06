@@ -7,6 +7,7 @@ import Image4 from "../../assets/work/myexpat.png";
 import Image5 from "../../assets/work/Investissement-locatif.png";
 import Image6 from "../../assets/work/nousgerons.png";
 import Image7 from "../../assets/work/beetravel.png";
+import Image8 from "../../assets/work/IL.png";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useRef } from "react";
 
@@ -45,6 +46,11 @@ const datas = [
     image: Image7,
     title: "Creation of the Beetravel website",
     url: "https://github.com/RovaFitia/beetravel",
+  },
+  {
+    image: Image8,
+    title: "Integration of Investissement locatif web site",
+    url: "https://github.com/RovaFitia/SiteInvestIntegration",
   },
 ];
 
